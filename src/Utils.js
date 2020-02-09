@@ -11,11 +11,11 @@ const Weather=(alt,long,callback)=>{
             callback('Wrong Corrdinates , please try again',undefined)
         }else{
             callback(undefined,{
-                currenttemp:body.currently.temperature,
-                rainprob:body.currently.precipProbability,
-                sumarry:body.daily.data[0].summary,
-                maxtemp:body.daily.data[0].temperatureHigh,
-                mintemp:body.daily.data[0].temperatureLow
+                currenttemp : body.currently.temperature,
+                rainprob : body.currently.precipProbability,
+                sumarry : body.daily.data[0].summary,
+                maxtemp : body.daily.data[0].temperatureHigh,
+                mintemp : body.daily.data[0].temperatureLow
             })
         }
         

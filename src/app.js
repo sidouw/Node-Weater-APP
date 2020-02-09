@@ -50,12 +50,12 @@ app.get('/weather',(req,res)=>{
         if (error) {
             return res.send({error})
         }else{
-            forecast.Weather(Alt,Long,(error,{sumarry,currenttemp})=>{
+            forecast.Weather(Alt,Long,(error,{sumarry,currenttemp,mintemp,maxtemp,rainprob})=>{
                 if (error) {
                     return res.send({error})
                 }else {
                     res.send({
-                        forecast: sumarry + "it is currently "+ currenttemp +" outside",
+                        forecast: sumarry + "it is currently "+ currenttemp +"degress outside,with the max of "+maxtemp+" degress and a low of "+mintemp+" degress with a rain probablity of "+rainprob+"%",
                         Location,
                         adress : req.query.adress
                     })

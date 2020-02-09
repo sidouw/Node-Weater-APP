@@ -7,7 +7,10 @@ const msg2 = document.querySelector('#msg2')
 
 weatherform.addEventListener('submit',(e)=>{
     e.preventDefault()
+    
     msg1.textContent ='Loading ....'
+
+
     fetch('/weather?adress='+locatin.value).then((response)=>{
         response.json().then((data)=>{
         if(data.error){
